@@ -140,7 +140,13 @@ header{
     background-color: #ffffff;
     position: fixed;
     top: 0;
-    right: 0;
+    right:-20rem;
+    transition: all 1s
+}
+
+.sidebar.show-menu {
+    right:0;
+
 }
 
 
@@ -186,7 +192,12 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    transition: background-color 1s;
 
+}
+.social-media i:hover{
 
+    background-color: #a044ff;
 }
 
