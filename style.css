@@ -1,9 +1,10 @@
+/* LINKS DAS FONTES UTILIZADAS NO CSS . */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 
 *{
-
+/* RETIRAR TODAS AS MARGENS E MARGENS INTERNAS COM O PADING */
  margin: 0%;
  padding: 0%;
  list-style: none;
@@ -86,7 +87,7 @@
     opacity:1 ;
 }
 
-
+/* LARGURA 100% E ALTURA DE VISUALIZAÇÃO DE CARREGAMENTO DE PÁGINA. VH VIEW HIGHT, POSICIONAMENTO RELATIVO */
 header{
     width: 100%;
     height: 100vh;
@@ -96,13 +97,17 @@ header{
 
 }
 
-
+/* CLASSE DE ENVELOPAMENTO DE IMAGÉM, OVERFLWOW DESABILITA A POSSIBLIDADE DO CABEÇALHO PASSAR O TAMANHO DA JANELA,
+ GERANDO UMA BARRA DE ROLAGEM HORIZONTAL,
+  FUNÇÃO RGBA PASSANDO VALOR DE 0 A 255 E TAMBÉM ALTERANDO SUA TRANSPARÊNCIA */
 .img.wrapper {
     width: 100%;
     height: 100%;
     overflow: hidden;
     background-color: rgba(0,0,0,0.8)
 }
+
+/*  SELETOR CSS PRA IMAGENS QUE ESTÃO DENTRO DA CLASSE IMG WRAPPER, OBJECT FIT PRA ESPECIFICAR DE QUE MANEIRA ESSE OBJETO SERÁ COLOCADO LÁ DENTRO, ANIMAÇÃO COM ZOOM */
 
 .img.wrapper img{
     width: 100%;
@@ -120,12 +125,13 @@ header{
     }
 }
 
-
+/* BANNER COM POSICIONAMENTO ABSOLUTO */
 .banner {
     position:absolute;
     top: 30%;
     left: 15%;
 }
+/* BANNER REFERENCIANDO O H1, COM TEXT SHADOW TEM VÁRIAS PROPRIEDADES, O DISTANCIAMENTO E O BLUR, O QUANTO FICA EMBAÇADO E ANIMAÇÃO MOVEBANNER */
 .banner h1 {
     color: #ffffff;
     font-size: 3.5rem;
@@ -137,6 +143,8 @@ header{
     opacity: 0;
     animation: moveBanner 1s 0.5s forwards;
 }
+
+/* BANNER DO PARAGRAFO */
 .banner p {
     font-family:var(--font-secundary);
     color: #ffffff;
@@ -146,6 +154,8 @@ header{
     opacity: 0;
     animation: moveBanner 1s 0.7s forwards;
 }
+
+/* BANNER DO BOTÃO, CORES COM SUPORTE A NAVEGADORES ANTIGOS SEM SUPORTE AO LINEAR GRADIENTE , VERSOES ESPECIFCAS DO CHROME E OUTROS NAVEGADORES  */
 .banner button {
     font-family:var(--font-secundary);
     color: #ffffff;
