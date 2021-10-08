@@ -4,14 +4,14 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 
 *{
-/* RETIRAR TODAS AS MARGENS E MARGENS INTERNAS COM O PADING */
+/* RETIRAR TODAS AS MARGENS E MARGENS INTERNAS COM O PADING, E TEXT DECORATION  TIRA O SUBLINHADO E AS BOLINHAS DOS LINKS*/
  margin: 0%;
  padding: 0%;
  list-style: none;
  text-decoration: none;
 
 }
-
+/*VARIAVES PARA FONTES */
 :root{
 
     --font-primary:"Baloo Da 2", serif;
@@ -19,13 +19,13 @@
     --font-action:"Muli", serif;
 }
 
-
+/*MENU HAMBURGUER;*/
 .hamburguer{
     /*background-color: red;*/
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 100; 
     right: 2rem;
     top: 2rem;
     display: flex;
@@ -39,7 +39,7 @@
 
 }
 
-
+/*LINHAS DO MENU HAMBURGUER COM ANIMAÇÃO DA TRANSFORMAÇÃO DOS ELEMENTOS DE X PARA MENU HAMBURGUER*/
 .line{
     width: 100%;
     height: .1rem;
@@ -47,6 +47,7 @@
     box-shadow: 0.1rem 0.1rem 1px #000;
     transition:transform 1s;
 }
+/*MOVIMENTAÇÃO DAS LINHAS PARA QUE O MENU HAMBURGUER SE TORNE UM X AO SER CLICADO PARA FECHAR O SIDEBAR*/
 
 .show-menu #line1{
     transform: rotate(45deg) translate(.3rem, .45rem);
@@ -116,6 +117,8 @@ header{
     opacity: 0.5;
     animation: zoom 25s;
 }
+
+/* KEY FRAMES SÃO QUADROS QUE VOCÊ PRECISA APENAS DEFINIR O PRIMEIRO E O ULTIMO FRAME, E O SOFTWARE CRIA O DO MEIO AUTOMÁTICAMENTE CRIANDO UMA ANIMAÇÃO */
 @keyframes zoom {
     0%{
         transform: scale(1.3);
@@ -131,7 +134,8 @@ header{
     top: 30%;
     left: 15%;
 }
-/* BANNER REFERENCIANDO O H1, COM TEXT SHADOW TEM VÁRIAS PROPRIEDADES, O DISTANCIAMENTO E O BLUR, O QUANTO FICA EMBAÇADO E ANIMAÇÃO MOVEBANNER */
+/* BANNER REFERENCIANDO O H1, COM TEXT SHADOW TEM VÁRIAS PROPRIEDADES, O DISTANCIAMENTO E O BLUR, O QUANTO FICA EMBAÇADO
+ E ANIMAÇÃO MOVEBANNER, ANIMAÇÃO EM ORDEM DE CIMA PARA BAIXO, O NOME, SUBTITULO E BOTÃO SURGEM NA PÁGINA DE BAIXO PARA CIMA, COM OPACIDADE 0 PARA QUE ELES SURJAM */
 .banner h1 {
     color: #ffffff;
     font-size: 3.5rem;
@@ -155,7 +159,7 @@ header{
     animation: moveBanner 1s 0.7s forwards;
 }
 
-/* BANNER DO BOTÃO, CORES COM SUPORTE A NAVEGADORES ANTIGOS SEM SUPORTE AO LINEAR GRADIENTE , VERSOES ESPECIFCAS DO CHROME E OUTROS NAVEGADORES  */
+/* BANNER DO BOTÃO, CORES COM SUPORTE A NAVEGADORES ANTIGOS SEM SUPORTE AO LINEAR GRADIENTE , VERSOES ESPECIFCAS DO CHROME E OUTROS NAVEGADORES, CURSOR  */
 .banner button {
     font-family:var(--font-secundary);
     color: #ffffff;
@@ -171,11 +175,15 @@ header{
      opacity: 0;
      animation: moveBanner 1s 0.9s forwards;
 
+
+/* PSEUDO CLASSE, É UMA CLASSE QUE IDENTIFICA UMA AÇÃO, UM EVENTO NA PÁGINA */
 }
 .banner button:hover{
     opacity:0.8;
 }
 
+
+/* KEY FRAMES USANDO PLANO CARTESIANO PARA FAZER COM QUE AS LETRAS SUBAM E GIREM*/
 @keyframes moveBanner {
     0% {
         transform: translateY(10rem)rotateY(-30deg);
@@ -186,6 +194,8 @@ header{
     }
 }
 
+/*BARRA LATERAL*/
+
 .sidebar{
     width: 20rem;
     height: 100vh;
@@ -195,14 +205,14 @@ header{
     right:-20rem;
     transition: all 1s
 }
-
+/*FAZER O SIDEBAR SURGIR */
 .show-menu .sidebar{
     right: 0;
 
 }
 
 
-
+/*MENU SIDEBAR*/
 .menu{
     position: absolute;
     top: 40%;
@@ -210,21 +220,26 @@ header{
     transform: translate(-50%, -50%);
 
 }
-
+ /* LINK*/
 .menu-item{
     text-align: center;
     margin-bottom: .5rem;
 }
+/*FORMATAÇÃO DOS LINKS*/
 .menu-link{
     font-family: var(--font-action);
     font-size:2rem ;
     color: #555;
     transition: color 1s ;
 }
+
+/*EVENTO*/
 .menu-link:hover{
     color: #6a3093;
 
 }
+
+/*FORMATAÇÃO DAS REDES SOCIAIS*/
 .social-media{
     background-color: rgba(red, green, blue, 5);
     position: absolute;
@@ -234,7 +249,7 @@ header{
     justify-content: space-evenly;
    
 }
-
+/*FORMATAÇÃO DOS ICONES */
 .social-media i{
     background-color:#6a3093;
     color: rgba(255, 255, 255, 1);
@@ -248,6 +263,7 @@ header{
     transition: background-color 1s;
 
 }
+/*EVENTO DO ICONE ACENDER  */
 .social-media i:hover{
 
     background-color: #a044ff;
